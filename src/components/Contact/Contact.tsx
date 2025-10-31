@@ -53,7 +53,7 @@ export default function Contact({ className }: Props) {
 
 	return (
 		<section
-			className={`${className} flex flex-col bg-white gap-6 p-6 rounded-xl text-lg shadow-md`}
+			className={`${className} flex flex-col p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto w-xl md:w-2xl lg:w-4xl rounded-xl text-lg shadow-md`}
 		>
 			<Form {...form}>
 				<form
@@ -143,7 +143,7 @@ export default function Contact({ className }: Props) {
 					</Button>
 				</form>
 				<p className='text-l'>
-					Prefer email? Reach out directly at hello@undermousecreative.com
+					Or you can send an email to undermouseweb@gmail.com
 				</p>
 			</Form>
 		</section>
