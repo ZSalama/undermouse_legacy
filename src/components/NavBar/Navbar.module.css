@@ -1,0 +1,192 @@
+.navList {
+    list-style: none; /* Removes bullet points */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.home_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_container {
+    /* Pushes the home link to the left */
+    margin-right: auto;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 7rem;
+    border-radius: 0.5rem;
+    background-color: var(--sidebar);
+}
+
+.home_logo {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin-left: 0rem; */
+}
+
+.link {
+    display: flex;
+    text-decoration: none;
+    padding: 2em 2em;
+    width: 7rem;
+    justify-content: center;
+    color: #black;
+    border-radius: 0.5rem;
+    background-color: var(--sidebar);
+}
+
+.activeLink {
+    background-color: var(--sidebar-foreground);
+    color: var(--sidebar-accent);
+}
+
+.nav {
+    /* background-color: var(--sidebar); */
+    z-index: 50;
+    /* Set a maximum width for the .nav element */
+    max-width: 1550px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space between home link and other items */
+    align-items: center;
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+    font-size: 1.1rem;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: center; /* Center the .nav horizontally */
+    /* background-color: var(--sidebar); */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    /* padding-right: 2rem; */
+}
+
+.nav li {
+    display: flex;
+    /* background-color: var(--sidebar); */
+    /* transition: background-color 0.2s ease, transform 0.2s ease; */
+    rounded: 0.5rem;
+}
+
+.link:hover {
+    background-color: var(--sidebar-foreground);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    color: var(--sidebar-accent);
+    transform: translateY(-2px);
+}
+
+.menu_open_button {
+    z-index: 50;
+    display: none;
+}
+
+.menu_close_button {
+    display: none;
+}
+
+/* @media screen and (min-width: 1430px) {
+    .home_link {
+        margin-left: 50px;
+    }
+} */
+
+/* This media query applies styles for screens smaller than 800px */
+@media screen and (max-width: 800px) {
+    .nav {
+        background-color: var(--sidebar);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100dvh;
+        width: min(15em, 100%);
+        z-index: 10;
+        /* border-left: 1px solid var(--sidebar); */
+        transition: right 300ms ease-out;
+        /* background-color: var(--sidebar); */
+    }
+
+    .menu_open_button {
+        /* fill: var(--nav-text); */
+        position: fixed;
+        display: block;
+        background: none;
+        border: none;
+        padding: 1em;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .menu_close_button {
+        display: flex;
+        background: none;
+        border: none;
+        background-color: var(--sidebar);
+        /* padding: 1em; */
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .show {
+        right: 0;
+    }
+
+    .hide {
+        right: -100%;
+    }
+
+    .navList {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .link {
+        width: 100%;
+        padding: 1em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .activeLink {
+        border-bottom: none;
+
+        /* background-color: var(--sidebar-accent); */
+    }
+
+    .home_container {
+        /* margin-right: unset; */
+        /* margin-left: 0; */
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 10;
+        transition: background-color 0.3s ease;
+        pointer-events: none;
+    }
+
+    .overlay_show {
+        background: rgba(0, 0, 0, 0.5);
+        pointer-events: auto;
+    }
+}

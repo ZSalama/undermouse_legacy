@@ -1,0 +1,89 @@
+.CTA_container {
+	display: flex;
+	/* position: relative; */
+	flex-direction: column;
+	justify-content: center;
+	height: 100svh;
+	max-width: 60rem;
+	margin: 0 auto;
+	/* padding-left: 2rem; */
+
+	/* height: -webkit-fill-available; */
+	/* background-color: #f3f4f6; gray-100 */
+	/* a little extra side padding */
+	/* controls the space between headline & button */
+	gap: 2rem;
+	background-image: url('/8N3mLMs01.svg');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	/* background-size: 150% auto; */
+	/* background-size: 200% auto; */
+	/* overflow-y: scroll;
+    scroll-snap-type: y mandatory; */
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+/*
+body,
+html {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+} */
+
+.headline {
+	/* wide enough for wrapping */
+	/* max-width: 35rem; */
+	/* remove the old push */
+	/* margin: 0; */
+}
+
+.CTA_button_container {
+	display: flex;
+	/* justify-content: left; */
+	padding: 0rem 2rem;
+	/* padding-left: 2.2rem; */
+}
+
+.CTA_button {
+	/* soft gray background, dark text, rounded corners */
+	background-color: var(--sidebar);
+	padding: 0.75rem 2rem;
+	border-radius: 0.5rem;
+	width: fit-content;
+	/* font-weight: 600; */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	/* transition: background-color 0.2s ease, transform 0.2s ease; */
+}
+
+.CTA_button:hover {
+	background-color: var(--sidebar-foreground);
+	color: var(--sidebar-accent);
+	transform: translateY(-2px);
+}
+
+/* .portfolio_container {
+    justify-content: center;
+    align-items: center;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-top: 20rem;
+    margin: 2rem;
+} */
+
+.middle_image_container {
+	justify-content: center;
+	align-items: center;
+	/* max-width: 60rem; */
+	margin: 0 auto;
+	height: 100svh;
+	margin-top: 10rem;
+}
+
+@keyframes draw {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
