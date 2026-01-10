@@ -12,6 +12,8 @@ import Portfolio from '@/components/Portfolio/Portfolio'
 import Blog from '@/components/Blog/Blog'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import Services from '@/components/Services/Services'
+import Pricing from '@/components/Pricing/pricing'
 
 const Contact = dynamic(() => import('@/components/Contact/Contact'), {
 	ssr: false,
@@ -72,6 +74,12 @@ export default function Hero_Client(blog: any) {
 				</div>
 				<div className='flex justify-center'>
 					<About className='mt-10 md:mb-20' />
+				</div>
+				<div className='mt-20'>
+					<Services />
+				</div>
+				<div className='mt-20'>
+					<Pricing />
 				</div>
 				<div
 					className='flex mt-20 px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl items-center justify-between'
