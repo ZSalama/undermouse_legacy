@@ -21,27 +21,21 @@ const Contact = dynamic(() => import('@/components/Contact/Contact'), {
 
 export default function Hero_Client(blog: any) {
 	const container = useRef<HTMLDivElement | null>(null)
-	const page_container = useRef<HTMLDivElement | null>(null)
 
 	const { scrollYProgress } = useScroll({
 		target: container,
 		offset: ['start start', 'end end'],
 	})
 
-	const page_container_parallax = useScroll({
-		target: page_container,
-		offset: ['start start', 'end end'],
-	})
+	// useEffect(() => {
+	// 	const lenis = new Lenis()
 
-	useEffect(() => {
-		const lenis = new Lenis()
-
-		function raf(time: number) {
-			lenis.raf(time)
-			requestAnimationFrame(raf)
-		}
-		requestAnimationFrame(raf)
-	}, [])
+	// 	function raf(time: number) {
+	// 		lenis.raf(time)
+	// 		requestAnimationFrame(raf)
+	// 	}
+	// 	requestAnimationFrame(raf)
+	// }, [])
 
 	return (
 		<>
@@ -50,10 +44,10 @@ export default function Hero_Client(blog: any) {
 					ref={container}
 					className='relative h-[200vh] bg-gray-900   align-center mx-auto'
 				>
-					<motion.div
+					{/* <motion.div
 						id='scroll-indicator'
 						style={{
-							scaleX: page_container_parallax.scrollYProgress,
+							scaleX: scrollYProgress,
 							position: 'fixed',
 							top: 0,
 							left: 0,
@@ -63,7 +57,7 @@ export default function Hero_Client(blog: any) {
 							zIndex: 999,
 						}}
 						className='bg-[var(--sidebar)]'
-					/>
+					/> */}
 
 					<Section1 scrollYProgress={scrollYProgress} />
 					<Section2 scrollYProgress={scrollYProgress} />
